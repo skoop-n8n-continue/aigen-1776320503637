@@ -4,11 +4,11 @@
  */
 
 const weatherData = {
-    // Mapping specific April 2026 dates to forecast data from search results
-    'April 17': { high: '91°F', low: '72°F', condition: 'Cloudy', icon: '☁️' },
-    'April 20': { high: '98°F', low: '72°F', condition: 'Sunny & Clear', icon: '☀️' },
-    'April 24': { high: '103°F', low: '77°F', condition: 'Partly Sunny', icon: '⛅' },
-    'April 27': { high: '108°F', low: '82°F', condition: 'Very Hot / Clear', icon: '☀️' }
+    // Mapping specific April 2026 dates to forecast data in Celsius
+    'April 17': { high: '33°C', low: '22°C', condition: 'Cloudy', icon: '☁️' },
+    'April 20': { high: '37°C', low: '22°C', condition: 'Sunny & Clear', icon: '☀️' },
+    'April 24': { high: '39°C', low: '25°C', condition: 'Partly Sunny', icon: '⛅' },
+    'April 27': { high: '42°C', low: '28°C', condition: 'Very Hot / Clear', icon: '☀️' }
 };
 
 function updateTime() {
@@ -53,7 +53,7 @@ function getNextDayOfWeek(date, dayOfWeek) {
 }
 
 function displayDayForecast(prefix, dateStr) {
-    const data = weatherData[dateStr] || { high: '95°F', low: '70°F', condition: 'Sunny', icon: '☀️' }; // Fallback
+    const data = weatherData[dateStr] || { high: '35°C', low: '21°C', condition: 'Sunny', icon: '☀️' }; // Fallback
 
     document.getElementById(`${prefix}-date`).textContent = dateStr;
     document.getElementById(`${prefix}-high`).textContent = data.high;

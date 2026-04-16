@@ -102,6 +102,8 @@ h1 {
     transform: scale(1.02);
     border-color: var(--primary);
 }
+
+.temp-container {
     display: flex;
     justify-content: center;
     align-items: baseline;
