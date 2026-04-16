@@ -1,0 +1,164 @@
+:root {
+    --primary: #00b7af;
+    --dark: #10181f;
+    --light: #ffffff;
+    --secondary: #6a7071;
+    --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark);
+    color: var(--light);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--secondary);
+    margin-top: 0.5rem;
+}
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.day-card {
+    background: var(--card-bg);
+    border-radius: 2rem;
+    padding: 3rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    max-height: 600px;
+}
+
+.day-name {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.date {
+    font-size: 1.2rem;
+    color: var(--secondary);
+    margin-bottom: 2rem;
+}
+
+.weather-icon {
+    font-size: 8rem;
+    margin-bottom: 1.5rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.day-card:hover {
+    transform: scale(1.02);
+    border-color: var(--primary);
+}
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.high {
+    font-size: 5rem;
+    font-weight: 800;
+    color: var(--light);
+}
+
+.low {
+    font-size: 2.5rem;
+    color: var(--primary);
+    opacity: 0.8;
+}
+
+.condition {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--light);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#current-time {
+    font-size: 1.5rem;
+    color: var(--secondary);
+}
+
+.location-label {
+    font-size: 1.5rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Responsive adjustments for vertical signage if needed */
+@media (max-aspect-ratio: 1/1) {
+    .forecast-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .day-card {
+        padding: 2rem;
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Lahore Weather - Monday & Friday</title>
+    <link rel="stylesheet" href="styles.css?v=x1y2z3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Lahore Weather</h1>
+            <p class="subtitle">Monday & Friday Forecast</p>
+        </header>
+
+        <main class="forecast-grid">
+            <div class="day-card" id="monday-card">
+                <div class="day-name">Monday</div>
+                <div class="date" id="monday-date">--</div>
+                <div class="weather-icon" id="monday-icon">☀️</div>
+                <div class="temp-container">
+                    <span class="high" id="monday-high">--°</span>
+                    <span class="low" id="monday-low">--°</span>
+                </div>
+                <div class="condition" id="monday-condition">Loading...</div>
+            </div>
+
+            <div class="day-card" id="friday-card">
+                <div class="day-name">Friday</div>
+                <div class="date" id="friday-date">--</div>
+                <div class="weather-icon" id="friday-icon">⛅</div>
+                <div class="temp-container">
+                    <span class="high" id="friday-high">--°</span>
+                    <span class="low" id="friday-low">--°</span>
+                </div>
+                <div class="condition" id="friday-condition">Loading...</div>
+            </div>
+        </main>
+
+        <footer>
+            <div id="current-time"></div>
+            <div class="location-label">Lahore, Pakistan</div>
+        </footer>
+    </div>
+    <script src="script.js?v=x1y2z3"></script>
+</body>
+</html>
